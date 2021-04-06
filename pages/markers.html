@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Markers</title>
+    <!--Librerias-->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden">
+    <a-scene
+    embedded
+    arjs
+    renderer="logarithmicDepthBuffer: true;"
+    vr-mode-ui="enabled: false"
+    >
+        <a-assets>
+            
+            <a-asset-item src="../assets/pokemon_masters_cap/gorra.glb" id="pokeball"></a-asset-item>
+            <img src="../assets/logo/Gastly.png" id="gastly" >
+        </a-assets>
+
+        <!--Imagen-->
+        <a-marker preset="hiro">
+            <a-image
+                position="0 0 0"
+                rotation="90 180 0"
+                src="#gastly"
+            ></a-image>
+        </a-marker>
+        
+        <!--Modelo 3D-->
+        <a-marker preset="kanji">
+            <a-entity
+                scale="0.001 0.001 0.001"
+                rotation="90 180 0"
+                position="0 0 0"
+                gltf-model="#pokeball"
+            ></a-entity>
+        </a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
