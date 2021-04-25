@@ -1,0 +1,28 @@
+.controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    bottom: 5%;
+    right: 5%;
+    background-color: #fefcfd;
+    border-radius: 4px;
+}
+
+button {
+    font-family: sans-serif;
+    padding: 4px 8px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #2f9c95;
+    color: #fefcfd;
+    cursor: pointer;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+button:active {
+    transform: scale(0.9);
+}
