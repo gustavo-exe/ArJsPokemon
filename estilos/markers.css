@@ -9,7 +9,11 @@
     background-color: #fefcfd;
     border-radius: 4px;
 }
-
+p{
+    text-align: center;
+    padding: 1rem;
+    font-family: sans-serif;
+}
 button {
     font-family: sans-serif;
     padding: 4px 8px;

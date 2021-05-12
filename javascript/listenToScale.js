@@ -14,7 +14,7 @@ AFRAME.registerComponent("listen-to-scale", {
     if (e.target.id === "up") {
       this.scaleFactor *= 1.5;
     } else {
-      this.scaleFactor *= 0.6667;
+      this.scaleFactor *= 0.2;
     }
 
     this.el.object3D.scale.x = this.scaleFactor;

@@ -1,3 +1,5 @@
+
+
 .arjs-loader {
     height: 100%;
     width: 100%;
@@ -15,4 +17,5 @@
     text-align: center;
     font-size: 1.25em;
     color: white;
+    font-family: sans-serif;
 }
