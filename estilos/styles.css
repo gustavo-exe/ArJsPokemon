@@ -1,3 +1,10 @@
+:root{
+    --Titulo-FontSize: 4rem;
+    --Texto-FonSize: 2rem;
+    --Primer-Orden: 1;
+    --Segundo-Orden: 2; 
+}
+
 .Container{
     font-family: sans-serif; 
     display: flex;
@@ -18,36 +25,82 @@ header{
 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-main{
+.ContainerSkew{
     width: 100%; 
-    height: 60vh;
     /*Skew*/
     padding: 8% 0px;
     transform: skew(0deg,-3deg);
     background-color: #fefcfd;
-}
-.skew{
-    height: 100%;
-    transform: skew(0deg, 3deg);
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    margin: 1rem;
+    /*Flex*/
+    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.Tarjeta{
+    transform: skew(0deg, 3deg);
+    display: flex;
+    height: 50vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 20rem;
+}
+
+.Ejemplo{
+    flex: 1;
+    box-shadow:  1px 2px 40px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+.Informacion{
+    flex: 2;
+    background-color: #fefcfd;
+    box-shadow:  1px 2px 40px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Ejemplo.Order{
+    order: var(--Segundo-Orden);
+}
+.Informacion.Order{
+    order: var(--Primer-Orden);
+}
+
+h1{
+    font-size: var(--Titulo-FontSize);
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: var(--Texto-FonSize);
+}
+
+a{
+    text-decoration: none;
+    color: #2f9c95;
 }
 
 button{
+    
     all: unset;
     border-radius: 10px; 
-    font-size: 4vw; 
-    width: 40%; 
-    height: 20%; 
+    font-size: var(--Texto-FonSize); 
     display: flex; 
     justify-content: center; 
     align-items: center;
     background-color: #2f9c95;
     color: #fefcfd;
+    padding: 1rem;
+    width: 8rem;
 }
 button:hover
 {
@@ -64,3 +117,39 @@ footer{
     font-size: calc(1vw + 1vh );
 }
 
+/*Movil*/
+@media only screen
+and (min-width: 320px)
+and (max-width: 736px)
+{
+    :root{
+        --Titulo-FontSize: 2rem;
+        --Texto-FonSize: 1rem;
+        --Primer-Orde: 2;
+        --Segundo-Orden: 1;
+    }
+        
+    .Tarjeta{
+        flex-direction: column;
+        margin-bottom: 12rem;
+        max-width: 300px;
+    }
+
+
+}
+
+/*iPad*/
+@media (min-width:768px) and (max-width:1024px) {
+    :root{
+        --Titulo-FontSize: 3rem;
+        --Texto-FonSize: 2.5rem;
+        --Primer-Orde: 2;
+        --Segundo-Orden: 1;
+    }
+        
+    .Tarjeta{
+        flex-direction: column;
+        margin-bottom: 30rem;
+    }
+
+}
